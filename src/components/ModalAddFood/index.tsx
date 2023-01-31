@@ -6,7 +6,7 @@ import { Modal } from '../Modal';
 import { Input } from '../Input';
 import { IFood } from '../../types';
 
-type Food = Omit<IFood, 'available' | 'id'>
+type Food = Omit<IFood, 'available'>
 
 interface ModalAddFoodProps {
   isOpen: boolean,
