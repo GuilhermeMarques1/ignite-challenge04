@@ -8,7 +8,7 @@ import { ModalEditFood } from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
 import { IFood } from '../../types';
 
-type Food = Omit<IFood, 'available'>
+type FoodType = Omit<IFood, 'available'>
 
 export function Dashboard() {
   const [foods, setFoods] = useState<IFood[]>([]);
@@ -26,7 +26,7 @@ export function Dashboard() {
     fetchFoods();
   }, []);
 
-  const handleAddFood = async (food: Food) => {
+  const handleAddFood = async (food: FoodType) => {
     try {
       const response = await api.post('/foods', {
         ...food,
